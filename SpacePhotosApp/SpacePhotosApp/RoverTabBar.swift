@@ -23,7 +23,7 @@ class RoverTabBar: UITabBarController {
         opportunityVC.title = "Opportunity"
         
         curiosityVC.tabBarItem = UITabBarItem(title: "Curiosty", image: UIImage(systemName: "c.circle.fill"), tag: 1)
-        
+        self.tabBar.tintColor = .systemIndigo
         spiritVC.tabBarItem = UITabBarItem(title: "Spirit", image: UIImage(systemName: "s.circle.fill"), tag: 2)
         
         opportunityVC.tabBarItem = UITabBarItem(title: "Opportunity", image: UIImage(systemName: "o.circle.fill"), tag: 3)
