@@ -14,7 +14,7 @@
 		7491AB05298D68830043B1F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7491AB03298D68830043B1F4 /* LaunchScreen.storyboard */; };
 		7491AB14298D765F0043B1F4 /* OpportunityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7491AB13298D765F0043B1F4 /* OpportunityVC.swift */; };
 		7491AB16298D76840043B1F4 /* SpiritVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7491AB15298D76840043B1F4 /* SpiritVC.swift */; };
-		7491AB18298D769F0043B1F4 /* CuriostyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7491AB17298D769F0043B1F4 /* CuriostyVC.swift */; };
+		7491AB18298D769F0043B1F4 /* CuriosityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7491AB17298D769F0043B1F4 /* CuriosityVC.swift */; };
 		7491AB1D298D7F3A0043B1F4 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7491AB1C298D7F3A0043B1F4 /* UICollectionView+Ext.swift */; };
 		7491AB1F298D7F8F0043B1F4 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7491AB1E298D7F8F0043B1F4 /* UIView+Ext.swift */; };
 		7491AB21298D81B10043B1F4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7491AB20298D81B10043B1F4 /* NetworkManager.swift */; };
@@ -22,6 +22,8 @@
 		74B501C1298D842800DD3F47 /* SpaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B501C0298D842800DD3F47 /* SpaceModel.swift */; };
 		74B501C3298D864300DD3F47 /* APIURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B501C2298D864300DD3F47 /* APIURLs.swift */; };
 		74B501C5298D8F5200DD3F47 /* OpportunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B501C4298D8F5200DD3F47 /* OpportunityViewModel.swift */; };
+		74B501C9298E6CAF00DD3F47 /* SpiritViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B501C8298E6CAF00DD3F47 /* SpiritViewModel.swift */; };
+		74B501CB298E6F5200DD3F47 /* CuriosityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B501CA298E6F5200DD3F47 /* CuriosityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +36,7 @@
 		7491AB06298D68830043B1F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7491AB13298D765F0043B1F4 /* OpportunityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityVC.swift; sourceTree = "<group>"; };
 		7491AB15298D76840043B1F4 /* SpiritVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiritVC.swift; sourceTree = "<group>"; };
-		7491AB17298D769F0043B1F4 /* CuriostyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuriostyVC.swift; sourceTree = "<group>"; };
+		7491AB17298D769F0043B1F4 /* CuriosityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuriosityVC.swift; sourceTree = "<group>"; };
 		7491AB1C298D7F3A0043B1F4 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
 		7491AB1E298D7F8F0043B1F4 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		7491AB20298D81B10043B1F4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -42,6 +44,8 @@
 		74B501C0298D842800DD3F47 /* SpaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceModel.swift; sourceTree = "<group>"; };
 		74B501C2298D864300DD3F47 /* APIURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIURLs.swift; sourceTree = "<group>"; };
 		74B501C4298D8F5200DD3F47 /* OpportunityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityViewModel.swift; sourceTree = "<group>"; };
+		74B501C8298E6CAF00DD3F47 /* SpiritViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiritViewModel.swift; sourceTree = "<group>"; };
+		74B501CA298E6F5200DD3F47 /* CuriosityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuriosityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,6 @@
 				7491AB0E298D75300043B1F4 /* Utilies */,
 				7491AB0D298D75290043B1F4 /* Screens */,
 				7491AB0C298D75130043B1F4 /* Services */,
-				7491AAFC298D68830043B1F4 /* RoverTabBar.swift */,
 				7491AB06298D68830043B1F4 /* Info.plist */,
 			);
 			path = SpacePhotosApp;
@@ -97,6 +100,7 @@
 		7491AB0D298D75290043B1F4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				74B501CC298E756200DD3F47 /* TabBar */,
 				7491AB12298D76480043B1F4 /* Opportunity */,
 				7491AB11298D762E0043B1F4 /* Spirit */,
 				7491AB10298D760A0043B1F4 /* Curiosty */,
@@ -127,7 +131,8 @@
 		7491AB10298D760A0043B1F4 /* Curiosty */ = {
 			isa = PBXGroup;
 			children = (
-				7491AB17298D769F0043B1F4 /* CuriostyVC.swift */,
+				7491AB17298D769F0043B1F4 /* CuriosityVC.swift */,
+				74B501CA298E6F5200DD3F47 /* CuriosityViewModel.swift */,
 			);
 			path = Curiosty;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				7491AB15298D76840043B1F4 /* SpiritVC.swift */,
+				74B501C8298E6CAF00DD3F47 /* SpiritViewModel.swift */,
 			);
 			path = Spirit;
 			sourceTree = "<group>";
@@ -164,6 +170,14 @@
 				74B501C0298D842800DD3F47 /* SpaceModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		74B501CC298E756200DD3F47 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				7491AAFC298D68830043B1F4 /* RoverTabBar.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,11 +253,13 @@
 				74B501BF298D83B200DD3F47 /* PhotoService.swift in Sources */,
 				7491AB21298D81B10043B1F4 /* NetworkManager.swift in Sources */,
 				7491AB1F298D7F8F0043B1F4 /* UIView+Ext.swift in Sources */,
-				7491AB18298D769F0043B1F4 /* CuriostyVC.swift in Sources */,
+				7491AB18298D769F0043B1F4 /* CuriosityVC.swift in Sources */,
 				74B501C3298D864300DD3F47 /* APIURLs.swift in Sources */,
 				7491AB14298D765F0043B1F4 /* OpportunityVC.swift in Sources */,
 				74B501C1298D842800DD3F47 /* SpaceModel.swift in Sources */,
+				74B501C9298E6CAF00DD3F47 /* SpiritViewModel.swift in Sources */,
 				7491AAFD298D68830043B1F4 /* RoverTabBar.swift in Sources */,
+				74B501CB298E6F5200DD3F47 /* CuriosityViewModel.swift in Sources */,
 				74B501C5298D8F5200DD3F47 /* OpportunityViewModel.swift in Sources */,
 				7491AB1D298D7F3A0043B1F4 /* UICollectionView+Ext.swift in Sources */,
 				7491AAF9298D68830043B1F4 /* AppDelegate.swift in Sources */,

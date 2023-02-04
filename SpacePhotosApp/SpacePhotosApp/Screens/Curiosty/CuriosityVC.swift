@@ -1,5 +1,5 @@
 //
-//  SpiritVC.swift
+//  CuriostyVC.swift
 //  SpacePhotosApp
 //
 //  Created by Furkan Sarı on 3.02.2023.
@@ -7,24 +7,25 @@
 
 import UIKit
 
-protocol SpiritVCProtocol : AnyObject {
+protocol CuriosityVCProtocol : AnyObject {
     func configureVC()
     func configureCollectionView()
     func reloadCollectionView()
 }
 
-class SpiritVC: UIViewController {
-    var viewModel = SpiritViewModel()
+class CuriosityVC: UIViewController {
+    var viewModel = CuriosityViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
         viewModel.viewDidLoad()
-        viewModel.getSpiritRover(roverName: .spirit)
+        viewModel.getCuriosityRover(roverName: .curiosity)
+        
     }
 
 }
 
-extension SpiritVC : SpiritVCProtocol {
+extension CuriosityVC : CuriosityVCProtocol {
     func configureVC() {
         view.backgroundColor = .systemBackground
     }
@@ -34,7 +35,7 @@ extension SpiritVC : SpiritVCProtocol {
     }
     
     func reloadCollectionView() {
-        print("reload")
+        print("break")
     }
     
     

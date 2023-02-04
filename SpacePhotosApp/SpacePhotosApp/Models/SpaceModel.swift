@@ -11,24 +11,8 @@ struct SpaceModel : Decodable {
     let photos : [SpacePhotos]?
 }
 
-struct SpacePhotos : Decodable {
-    let id : Int
-    let imgSrc: String?
-    let earthDate: String?
-    let rover : Rover?
-    let camera : Camera?
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case imgSrc = "img_src"
-        case earthDate = "earth_date"
-        case rover = "rover"
-        case camera = "camera"
-        
-    }
-}
 
-struct SpacePhotosx : Decodable {
+struct SpacePhotos : Decodable {
     let id, sol: Int?
     let camera: Camera?
     let imgSrc: String?
