@@ -21,7 +21,24 @@ class SpaceImageView: UIImageView {
     }
     
     func downloadImage(spaceObject : SpacePhotos) {
-        
+        guard let url = URL(string: spaceObject.imgSrc ?? "") else { return }
+        dataTask = NetworkManager.shared.download(url: url) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: image)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        dataTask?.resume()
+    }
+    
+    func cancelDownload() {
+        dataTask?.cancel()
+        dataTask = nil
     }
 
 }

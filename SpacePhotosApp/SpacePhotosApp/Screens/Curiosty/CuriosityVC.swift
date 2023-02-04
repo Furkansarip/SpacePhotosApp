@@ -19,6 +19,8 @@ class CuriosityVC: UIViewController {
     var collectionView : UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(UIScreen.main.bounds.height)
+        print(UIScreen.main.bounds.width)
         viewModel.delegate = self
         viewModel.viewDidLoad()
         viewModel.getCuriosityRover(roverName: .curiosity)
@@ -40,7 +42,7 @@ extension CuriosityVC : CuriosityVCProtocol {
         collectionView.dataSource = self
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(CuriosityCell.self, forCellWithReuseIdentifier: CuriosityCell.reuseID)
-        collectionView.contentInset = UIEdgeInsets(top: 5, left: 10, bottom: 0, right: 10)
+        
         
         collectionView.pinToEdges(view: view)
     }
@@ -69,7 +71,7 @@ extension CuriosityVC : UICollectionViewDelegate,UICollectionViewDataSource {
         let height = scrollView.frame.size.height
         
         if offSetY >= contentHeight - (2*height) {
-            print("Pagination")
+            viewModel.getCuriosityRover(roverName: .curiosity)
         }
     }
     

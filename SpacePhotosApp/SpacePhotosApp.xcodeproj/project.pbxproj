@@ -109,6 +109,7 @@
 		7491AB0D298D75290043B1F4 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				74B501D7298E9CCF00DD3F47 /* DetailScreen */,
 				74B501CC298E756200DD3F47 /* TabBar */,
 				7491AB12298D76480043B1F4 /* Opportunity */,
 				7491AB11298D762E0043B1F4 /* Spirit */,
@@ -206,6 +207,13 @@
 				74B501D5298E7DED00DD3F47 /* SpaceImageView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		74B501D7298E9CCF00DD3F47 /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

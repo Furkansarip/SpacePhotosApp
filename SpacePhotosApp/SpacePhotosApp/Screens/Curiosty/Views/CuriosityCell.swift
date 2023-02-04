@@ -14,6 +14,7 @@ class CuriosityCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureCell()
+        configureSpaceImage()
     }
     
     required init?(coder: NSCoder) {
@@ -21,7 +22,7 @@ class CuriosityCell: UICollectionViewCell {
     }
     
     private func configureCell() {
-        backgroundColor = .systemIndigo
+            backgroundColor = .systemBackground
            layer.cornerRadius = 16
            clipsToBounds = true
            
@@ -29,15 +30,22 @@ class CuriosityCell: UICollectionViewCell {
        
        override func prepareForReuse() {
            super.prepareForReuse()
+           images.image = nil
+           images.cancelDownload()
           
        }
        
        func setCell(photo : SpacePhotos) {
            images.downloadImage(spaceObject: photo)
-       }
-       
-       private func configurePosterPath() {
            
+       }
+    
+        
+       
+       private func configureSpaceImage() {
+           images = SpaceImageView(frame: .zero)
+           addSubview(images)
+           images.pinToEdges(view: self)
            
        }
 }
