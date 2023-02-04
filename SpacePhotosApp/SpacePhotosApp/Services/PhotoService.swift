@@ -29,7 +29,7 @@ class PhotoService {
     private func handleWithData(_ data:Data) -> [SpacePhotos]? {
         do {
             let spacePhotos = try JSONDecoder().decode(SpaceModel.self, from: data)
-            print(spacePhotos.photos?.count)
+            
             return spacePhotos.photos
         } catch {
             print(error.localizedDescription)

@@ -13,8 +13,10 @@ protocol CuriosityVCProtocol : AnyObject {
     func reloadCollectionView()
 }
 
+
 class CuriosityVC: UIViewController {
     var viewModel = CuriosityViewModel()
+    var collectionView : UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
@@ -31,12 +33,47 @@ extension CuriosityVC : CuriosityVCProtocol {
     }
     
     func configureCollectionView() {
-        print("break")
+        
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: UIHelper.collectionViewFlowLayout())
+        view.addSubview(collectionView)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.register(CuriosityCell.self, forCellWithReuseIdentifier: CuriosityCell.reuseID)
+        collectionView.contentInset = UIEdgeInsets(top: 5, left: 10, bottom: 0, right: 10)
+        
+        collectionView.pinToEdges(view: view)
     }
     
     func reloadCollectionView() {
-        print("break")
+        collectionView.reloadOnMainThread()
     }
+    
+    
+}
+
+extension CuriosityVC : UICollectionViewDelegate,UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.curiosityRovers.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CuriosityCell.reuseID, for: indexPath) as? CuriosityCell else { return UICollectionViewCell() }
+        cell.setCell(photo: viewModel.curiosityRovers[indexPath.item])
+        return cell
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let offSetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if offSetY >= contentHeight - (2*height) {
+            print("Pagination")
+        }
+    }
+    
+  
     
     
 }
